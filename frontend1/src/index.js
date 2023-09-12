@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { ToastContainer } from "react-toastify";
 
 import "./index.css";
 
@@ -9,9 +10,21 @@ import SignUp from "./components/SignUp";
 
 const Applayout = () => {
   return (
-    <div>
+    <>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       <Outlet />
-    </div>
+    </>
   );
 };
 
